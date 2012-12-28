@@ -1,0 +1,17 @@
+web1:
+  php_extensions:
+      - curl
+      - dom
+      - pdo
+      - pdo_sqlite
+      - pdo_mysql
+      - apc
+      - mcrypt
+      - soap
+      - gd
+      - freetype
+  document_root: /webapp
+
+  shared_writable_dirs:
+      - /webapp/protected/runtime
+      - /webapp/assets
