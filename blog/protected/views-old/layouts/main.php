@@ -1,7 +1,7 @@
 <?php /* @var $this Controller */ ?>
 <?php
 //where your preferred login icons/buttons are located
-$path = "/viachore/blog/images/login_icons/";
+$path = "/aistream/blog/images/login_icons/";
 //These you have to set up in your config with appkey and secret obtained from their sites
 $providers = array('twitter','facebook','google','linkedin','live','myspace');
 //Open id servers in format 'name on image'=>'providerServer'
@@ -49,34 +49,34 @@ $openid_servers = array('yahoo'=>'https://me.yahoo.com',
 </header>
 
     <div class="hero-shot">
-    
+
         <div class="container">
             <div id="writeup">
                 <h1>Sharing is awesome!</h1>
                 <p>Duis arcu eros, gravida non fringilla facilisis, viverra quis nunc. Cras sed mauris sit</p>
             </div>
-        
+
             <div id="signin">
                 <?php $this->widget('application.modules.hybridauth.widgets.renderProviders'); ?>
             </div>
-        
+
         </div><!-- container -->
     </div><!-- hero-shot -->
-    
+
     <div class="bs-docs-social">
         <div class="container">
         </div>
     </div>
 
     <div class="container">
-        
+
         <div id="main" class="clearfix">
-            
+
             <div id="content">
                 <div id="wlt-PictureList" class="worklet">
                     <div class="worklet-info notice hide">
                     </div>
-                    
+
                     <div class="worklet-content">
                         <div class="clearfix">
                             <div id="wlt-PictureList-list" class="list-view">
@@ -86,14 +86,14 @@ $openid_servers = array('yahoo'=>'https://me.yahoo.com',
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="loadingDiv">
                     </div>
                 </div>
             </div><!-- content -->
-            
+
         </div><!-- main -->
-        
+
     </div><!-- container -->
 
     <div id="footer">

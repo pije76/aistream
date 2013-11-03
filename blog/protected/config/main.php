@@ -25,7 +25,7 @@ return array(
         'ext.esearch.*',
         'ext.usercounter.*',
 	),
-    
+
     'defaultController' => 'site',
 
 	'modules'=>array(
@@ -39,7 +39,7 @@ return array(
             // If removed, Gii defaults to localhost only. Edit carefully to taste.
             'ipFilters'=>array('127.0.0.1','::1'),
         ),
-        
+
         'user' => array(
             'debug' => false,
             'userTable' => 'user',
@@ -50,16 +50,16 @@ return array(
             'usergroupTable' => 'user_group',
             'usergroupMessagesTable' => 'user_group_message',
         ),
-        
+
         'membership' => array(
             'membershipTable' => 'membership',
             'paymentTable' => 'payment',
         ),
-        
+
         'friendship' => array(
             'friendshipTable' => 'friendship',
         ),
-        
+
         'profile' => array(
             'privacySettingTable' => 'privacysetting',
             'profileFieldTable' => 'profile_field',
@@ -67,62 +67,62 @@ return array(
             'profileCommentTable' => 'profile_comment',
             'profileVisitTable' => 'profile_visit',
         ),
-        
+
         'role' => array(
             'roleTable' => 'role',
             'userRoleTable' => 'user_role',
             'actionTable' => 'action',
             'permissionTable' => 'permission',
         ),
-        
+
         'message' => array(
             'messageTable' => 'message',
         ),
-        
+
         'avatar' => array(
             'avatarMaxWidth' => '0',
             'enableGravatar' => 'true',
         ),
-        
+
         'hybridauth' => array(
-            'baseUrl' => 'http://'. $_SERVER['SERVER_NAME'] . '/viachore/blog/hybridauth', 
+            'baseUrl' => 'http://'. $_SERVER['SERVER_NAME'] . '/aistream/blog/hybridauth',
             'withYiiUser' => false, // Set to true if using yii-user
-            "providers" => array ( 
+            "providers" => array (
                 "openid" => array (
                     "enabled" => true
                 ),
- 
-                "yahoo" => array ( 
-                    "enabled" => true 
+
+                "yahoo" => array (
+                    "enabled" => true
                 ),
- 
-                "google" => array ( 
+
+                "google" => array (
                     "enabled" => true,
                     "keys"    => array ( "id" => "", "secret" => "" ),
                     "scope"   => ""
                 ),
- 
-                "facebook" => array ( 
+
+                "facebook" => array (
                     "enabled" => true,
                     "keys"    => array ( "id" => "", "secret" => "" ),
-                    "scope"   => "email,publish_stream", 
-                    "display" => "" 
+                    "scope"   => "email,publish_stream",
+                    "display" => ""
                 ),
- 
-                "twitter" => array ( 
+
+                "twitter" => array (
                     "enabled" => true,
-                    "keys"    => array ( "key" => "", "secret" => "" ) 
+                    "keys"    => array ( "key" => "", "secret" => "" )
                 )
             )
         ),
     ),
-        
+
     // application components
 	'components'=>array(
         'bootstrap'=>array(
             'class'=>'bootstrap.components.Bootstrap',
         ),
-        
+
         'user'=>array(
             'class'=>'application.modules.user.components.YumWebUser',
 			// enable cookie-based authentication
@@ -134,36 +134,36 @@ return array(
             'returnAdminUrl' => true,
             */
 		),
-        
+
         'cache' => array('class' => 'system.caching.CDummyCache'),
-        
+
         // UserCounter
         'counter' => array(
             'class' => 'UserCounter',
-        ),            
-        
-        /*            
+        ),
+
+        /*
 		'db'=>array(
 			'connectionString' => 'sqlite:protected/data/blog.db',
 			'tablePrefix' => 'tbl_',
 		),
         */
-        
+
 		// uncomment the following to use a MySQL database
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=blog',
+			'connectionString' => 'mysql:host=localhost;dbname=aistream',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => 'tratap60',
 			'charset' => 'utf8',
 			'tablePrefix' => '',
 		),
-        
+
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
             'errorAction'=>'site/error',
         ),
-        
+
         'urlManager'=>array(
         	'urlFormat'=>'path',
             /*'urlSuffix'=>'.html',*/
@@ -174,7 +174,7 @@ return array(
         		'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
         	),
         ),
-        
+
         'authManager'=>array(
             'class'=>'RDbAuthManager',
             'connectionID'=>'db',
