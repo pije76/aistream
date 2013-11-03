@@ -1,0 +1,8 @@
+syntax: glob
+.git
+assets/
+protected/runtime/
+themes/classic/views/
+
+syntax: regexp
+^static/
